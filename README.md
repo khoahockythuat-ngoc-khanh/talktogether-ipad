@@ -1,52 +1,31 @@
-# TalkTogether iPad Prototype
+# TalkTogether iPad
 
-An iPad-first AAC conversation prototype based on the research proposal flow:
+**Dự án Khoa học Kỹ thuật 2026**
 
-1. Choose a conversation topic
-2. Parent receives suggested questions
-3. Child responds with AAC cards grouped by topic/action/emotion
-4. Device speaks the selected response
-5. Parent receives a follow-up prompt
-6. Conversation view
-7. Session summary with research metrics
-8. Local conversation history
+TalkTogether là một ứng dụng giao tiếp hỗ trợ trên iPad, được xây dựng nhằm giúp trẻ có khả năng ngôn ngữ hạn chế giao tiếp dễ dàng hơn với cha mẹ hoặc người hỗ trợ.
 
-## Run locally
+Ứng dụng kết hợp giao tiếp AAC (Augmentative and Alternative Communication) với AI để gợi ý câu hỏi và hỗ trợ duy trì cuộc trò chuyện theo ngữ cảnh.
+
+## Quy trình sử dụng
+
+1. Chọn chủ đề cuộc trò chuyện
+2. AI gợi ý câu hỏi cho phụ huynh
+3. Trẻ trả lời bằng các thẻ AAC theo chủ đề, hành động hoặc cảm xúc
+4. Thiết bị đọc thành tiếng câu trả lời đã chọn
+5. AI gợi ý câu hỏi tiếp theo dựa trên cuộc trò chuyện
+6. Tiếp tục tương tác trong giao diện hội thoại
+7. Xem phần tổng kết sau mỗi phiên
+8. Lưu lại lịch sử các cuộc trò chuyện trên thiết bị
+
+## Công nghệ AI
+
+TalkTogether sử dụng **Gemini 2.5 Lite** để tạo các câu hỏi và gợi ý tiếp theo dựa trên nội dung cuộc trò chuyện.
+
+AI được sử dụng nhằm giúp cuộc trò chuyện tự nhiên và phù hợp với ngữ cảnh hơn, trong khi trẻ vẫn giao tiếp thông qua hệ thống thẻ AAC.
+
+## Chạy ứng dụng trên máy tính
+
+Cài đặt các package cần thiết:
 
 ```bash
 npm install
-npm run dev
-```
-
-Then open `http://localhost:3000`.
-
-## Run on an iPad on the same Wi-Fi
-
-Start Next.js so it listens on your network:
-
-```bash
-npm run dev -- -H 0.0.0.0
-```
-
-Find your computer's local IP address and open on iPad Safari:
-
-```text
-http://YOUR-COMPUTER-IP:3000
-```
-
-For presentation, Safari → Share → **Add to Home Screen**. Open TalkTogether from the iPad Home Screen for a standalone app-like experience.
-
-## Included demo features
-
-- iPad-first responsive layout (portrait priority, landscape supported)
-- AAC cards with selected state
-- Quick responses: Có / Không / Con không biết
-- Vietnamese browser text-to-speech via `speechSynthesis`
-- Offline-style built-in suggestion flow (no API required for demo)
-- Session metrics: turns, response time placeholder, AI suggestion count, “show more” count
-- Local history using `localStorage`
-- PWA manifest / Apple standalone metadata
-
-## Important prototype note
-
-The current “AI” questions are a safe built-in demo suggestion set. This makes the competition demo stable even without internet. A real AI API can be connected later, while still constraining outputs to an approved question/AAC vocabulary set.
