@@ -1,4 +1,4 @@
-# TalkTogether iPad
+# TalkTogether
 
 **Dự án Khoa học Kỹ thuật 2026**
 
