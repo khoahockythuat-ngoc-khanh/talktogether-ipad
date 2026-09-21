@@ -1,0 +1,894 @@
+{
+  "generatedAt": "2026-09-21T00:14:21.466Z",
+  "pictograms": {
+    "Lớp học": {
+      "label": "Lớp học",
+      "query": "classroom",
+      "id": 5913,
+      "file": "/pictograms/arasaac/lop-hoc.png",
+      "source": "https://static.arasaac.org/pictograms/5913/5913_500.png"
+    },
+    "Sân trường": {
+      "label": "Sân trường",
+      "query": "schoolyard",
+      "id": 6204,
+      "file": "/pictograms/arasaac/san-truong.png",
+      "source": "https://static.arasaac.org/pictograms/6204/6204_500.png"
+    },
+    "Cô giáo": {
+      "label": "Cô giáo",
+      "query": "teacher",
+      "id": 2457,
+      "file": "/pictograms/arasaac/co-giao.png",
+      "source": "https://static.arasaac.org/pictograms/2457/2457_500.png"
+    },
+    "Bạn bè": {
+      "label": "Bạn bè",
+      "query": "friends",
+      "id": 2255,
+      "file": "/pictograms/arasaac/ban-be.png",
+      "source": "https://static.arasaac.org/pictograms/2255/2255_500.png"
+    },
+    "Học bài": {
+      "label": "Học bài",
+      "query": "study",
+      "id": 2387,
+      "file": "/pictograms/arasaac/hoc-bai.png",
+      "source": "https://static.arasaac.org/pictograms/2387/2387_500.png"
+    },
+    "Chơi": {
+      "label": "Chơi",
+      "query": "play",
+      "id": 2439,
+      "file": "/pictograms/arasaac/choi.png",
+      "source": "https://static.arasaac.org/pictograms/2439/2439_500.png"
+    },
+    "Ăn trưa": {
+      "label": "Ăn trưa",
+      "query": "lunch",
+      "id": 4609,
+      "file": "/pictograms/arasaac/an-trua.png",
+      "source": "https://static.arasaac.org/pictograms/4609/4609_500.png"
+    },
+    "Vẽ": {
+      "label": "Vẽ",
+      "query": "draw",
+      "id": 5506,
+      "file": "/pictograms/arasaac/ve.png",
+      "source": "https://static.arasaac.org/pictograms/5506/5506_500.png"
+    },
+    "Vui": {
+      "label": "Vui",
+      "query": "happy",
+      "id": 3245,
+      "file": "/pictograms/arasaac/vui.png",
+      "source": "https://static.arasaac.org/pictograms/3245/3245_500.png"
+    },
+    "Thích": {
+      "label": "Thích",
+      "query": "favorite",
+      "id": 30012,
+      "file": "/pictograms/arasaac/thich.png",
+      "source": "https://static.arasaac.org/pictograms/30012/30012_500.png"
+    },
+    "Mệt": {
+      "label": "Mệt",
+      "query": "tired",
+      "id": 2314,
+      "file": "/pictograms/arasaac/met.png",
+      "source": "https://static.arasaac.org/pictograms/2314/2314_500.png"
+    },
+    "Bình thường": {
+      "label": "Bình thường",
+      "query": "calm",
+      "id": 31310,
+      "file": "/pictograms/arasaac/binh-thuong.png",
+      "source": "https://static.arasaac.org/pictograms/31310/31310_500.png"
+    },
+    "Toán": {
+      "label": "Toán",
+      "query": "maths",
+      "id": 10260,
+      "file": "/pictograms/arasaac/toan.png",
+      "source": "https://static.arasaac.org/pictograms/10260/10260_500.png"
+    },
+    "Tiếng Việt": {
+      "label": "Tiếng Việt",
+      "query": "language",
+      "id": 32546,
+      "file": "/pictograms/arasaac/tieng-viet.png",
+      "source": "https://static.arasaac.org/pictograms/32546/32546_500.png"
+    },
+    "Tiếng Anh": {
+      "label": "Tiếng Anh",
+      "query": "English",
+      "id": 32705,
+      "file": "/pictograms/arasaac/tieng-anh.png",
+      "source": "https://static.arasaac.org/pictograms/32705/32705_500.png"
+    },
+    "Mỹ thuật": {
+      "label": "Mỹ thuật",
+      "query": "art",
+      "id": 2396,
+      "file": "/pictograms/arasaac/my-thuat.png",
+      "source": "https://static.arasaac.org/pictograms/2396/2396_500.png"
+    },
+    "Đọc": {
+      "label": "Đọc",
+      "query": "read",
+      "id": 5973,
+      "file": "/pictograms/arasaac/doc.png",
+      "source": "https://static.arasaac.org/pictograms/5973/5973_500.png"
+    },
+    "Viết": {
+      "label": "Viết",
+      "query": "write",
+      "id": 2380,
+      "file": "/pictograms/arasaac/viet.png",
+      "source": "https://static.arasaac.org/pictograms/2380/2380_500.png"
+    },
+    "Đếm số": {
+      "label": "Đếm số",
+      "query": "count",
+      "id": 2714,
+      "file": "/pictograms/arasaac/dem-so.png",
+      "source": "https://static.arasaac.org/pictograms/2714/2714_500.png"
+    },
+    "Tô màu": {
+      "label": "Tô màu",
+      "query": "color",
+      "id": 5968,
+      "file": "/pictograms/arasaac/to-mau.png",
+      "source": "https://static.arasaac.org/pictograms/5968/5968_500.png"
+    },
+    "Khó": {
+      "label": "Khó",
+      "query": "difficult",
+      "id": 4629,
+      "file": "/pictograms/arasaac/kho.png",
+      "source": "https://static.arasaac.org/pictograms/4629/4629_500.png"
+    },
+    "Dễ": {
+      "label": "Dễ",
+      "query": "easy",
+      "id": 4645,
+      "file": "/pictograms/arasaac/de.png",
+      "source": "https://static.arasaac.org/pictograms/4645/4645_500.png"
+    },
+    "Bạn thân": {
+      "label": "Bạn thân",
+      "query": "best friend",
+      "id": 38941,
+      "file": "/pictograms/arasaac/ban-than.png",
+      "source": "https://static.arasaac.org/pictograms/38941/38941_500.png"
+    },
+    "Nhóm bạn": {
+      "label": "Nhóm bạn",
+      "query": "group",
+      "id": 7116,
+      "file": "/pictograms/arasaac/nhom-ban.png",
+      "source": "https://static.arasaac.org/pictograms/7116/7116_500.png"
+    },
+    "Sân chơi": {
+      "label": "Sân chơi",
+      "query": "playground",
+      "id": 2859,
+      "file": "/pictograms/arasaac/san-choi.png",
+      "source": "https://static.arasaac.org/pictograms/2859/2859_500.png"
+    },
+    "Chơi cùng": {
+      "label": "Chơi cùng",
+      "query": "play together",
+      "id": 36145,
+      "file": "/pictograms/arasaac/choi-cung.png",
+      "source": "https://static.arasaac.org/pictograms/36145/36145_500.png"
+    },
+    "Chơi cầu trượt": {
+      "label": "Chơi cầu trượt",
+      "query": "playground slide",
+      "id": 36145,
+      "file": "/pictograms/arasaac/choi-cau-truot.png",
+      "source": "https://static.arasaac.org/pictograms/36145/36145_500.png"
+    },
+    "Chia sẻ": {
+      "label": "Chia sẻ",
+      "query": "share",
+      "id": 15361,
+      "file": "/pictograms/arasaac/chia-se.png",
+      "source": "https://static.arasaac.org/pictograms/15361/15361_500.png"
+    },
+    "Nói chuyện": {
+      "label": "Nói chuyện",
+      "query": "talk",
+      "id": 3345,
+      "file": "/pictograms/arasaac/noi-chuyen.png",
+      "source": "https://static.arasaac.org/pictograms/3345/3345_500.png"
+    },
+    "Đợi bạn": {
+      "label": "Đợi bạn",
+      "query": "wait",
+      "id": 8109,
+      "file": "/pictograms/arasaac/doi-ban.png",
+      "source": "https://static.arasaac.org/pictograms/8109/8109_500.png"
+    },
+    "Ngại": {
+      "label": "Ngại",
+      "query": "shy",
+      "id": 8707,
+      "file": "/pictograms/arasaac/ngai.png",
+      "source": "https://static.arasaac.org/pictograms/8707/8707_500.png"
+    },
+    "Buồn": {
+      "label": "Buồn",
+      "query": "sad",
+      "id": 2606,
+      "file": "/pictograms/arasaac/buon.png",
+      "source": "https://static.arasaac.org/pictograms/2606/2606_500.png"
+    },
+    "Làm xong": {
+      "label": "Làm xong",
+      "query": "finish",
+      "id": 5358,
+      "file": "/pictograms/arasaac/lam-xong.png",
+      "source": "https://static.arasaac.org/pictograms/5358/5358_500.png"
+    },
+    "Kể chuyện": {
+      "label": "Kể chuyện",
+      "query": "tell story",
+      "id": 6469,
+      "file": "/pictograms/arasaac/ke-chuyen.png",
+      "source": "https://static.arasaac.org/pictograms/6469/6469_500.png"
+    },
+    "Hào hứng": {
+      "label": "Hào hứng",
+      "query": "excited",
+      "id": 39090,
+      "file": "/pictograms/arasaac/hao-hung.png",
+      "source": "https://static.arasaac.org/pictograms/39090/39090_500.png"
+    },
+    "Tự hào": {
+      "label": "Tự hào",
+      "query": "proud",
+      "id": 31408,
+      "file": "/pictograms/arasaac/tu-hao.png",
+      "source": "https://static.arasaac.org/pictograms/31408/31408_500.png"
+    },
+    "Rất thích": {
+      "label": "Rất thích",
+      "query": "excited",
+      "id": 39090,
+      "file": "/pictograms/arasaac/rat-thich.png",
+      "source": "https://static.arasaac.org/pictograms/39090/39090_500.png"
+    },
+    "Góc sách": {
+      "label": "Góc sách",
+      "query": "books",
+      "id": 2450,
+      "file": "/pictograms/arasaac/goc-sach.png",
+      "source": "https://static.arasaac.org/pictograms/2450/2450_500.png"
+    },
+    "Bàn vẽ": {
+      "label": "Bàn vẽ",
+      "query": "drawing table",
+      "id": 36489,
+      "file": "/pictograms/arasaac/ban-ve.png",
+      "source": "https://static.arasaac.org/pictograms/36489/36489_500.png"
+    },
+    "Học tiếp": {
+      "label": "Học tiếp",
+      "query": "study",
+      "id": 2387,
+      "file": "/pictograms/arasaac/hoc-tiep.png",
+      "source": "https://static.arasaac.org/pictograms/2387/2387_500.png"
+    },
+    "Chơi tiếp": {
+      "label": "Chơi tiếp",
+      "query": "play",
+      "id": 2439,
+      "file": "/pictograms/arasaac/choi-tiep.png",
+      "source": "https://static.arasaac.org/pictograms/2439/2439_500.png"
+    },
+    "Đọc sách": {
+      "label": "Đọc sách",
+      "query": "read book",
+      "id": 39018,
+      "file": "/pictograms/arasaac/doc-sach.png",
+      "source": "https://static.arasaac.org/pictograms/39018/39018_500.png"
+    },
+    "Vẽ tranh": {
+      "label": "Vẽ tranh",
+      "query": "paint",
+      "id": 2348,
+      "file": "/pictograms/arasaac/ve-tranh.png",
+      "source": "https://static.arasaac.org/pictograms/2348/2348_500.png"
+    },
+    "Mong chờ": {
+      "label": "Mong chờ",
+      "query": "wait",
+      "id": 8109,
+      "file": "/pictograms/arasaac/mong-cho.png",
+      "source": "https://static.arasaac.org/pictograms/8109/8109_500.png"
+    },
+    "Lo": {
+      "label": "Lo",
+      "query": "worried",
+      "id": 26985,
+      "file": "/pictograms/arasaac/lo.png",
+      "source": "https://static.arasaac.org/pictograms/26985/26985_500.png"
+    },
+    "Cơm": {
+      "label": "Cơm",
+      "query": "rice",
+      "id": 6911,
+      "file": "/pictograms/arasaac/com.png",
+      "source": "https://static.arasaac.org/pictograms/6911/6911_500.png"
+    },
+    "Phở": {
+      "label": "Phở",
+      "query": "noodles",
+      "id": 8584,
+      "file": "/pictograms/arasaac/pho.png",
+      "source": "https://static.arasaac.org/pictograms/8584/8584_500.png"
+    },
+    "Bánh mì": {
+      "label": "Bánh mì",
+      "query": "sandwich",
+      "id": 2281,
+      "file": "/pictograms/arasaac/banh-mi.png",
+      "source": "https://static.arasaac.org/pictograms/2281/2281_500.png"
+    },
+    "Súp": {
+      "label": "Súp",
+      "query": "soup",
+      "id": 2573,
+      "file": "/pictograms/arasaac/sup.png",
+      "source": "https://static.arasaac.org/pictograms/2573/2573_500.png"
+    },
+    "Ăn": {
+      "label": "Ăn",
+      "query": "eat",
+      "id": 2349,
+      "file": "/pictograms/arasaac/an.png",
+      "source": "https://static.arasaac.org/pictograms/2349/2349_500.png"
+    },
+    "Uống": {
+      "label": "Uống",
+      "query": "drink",
+      "id": 2276,
+      "file": "/pictograms/arasaac/uong.png",
+      "source": "https://static.arasaac.org/pictograms/2276/2276_500.png"
+    },
+    "Muốn thêm": {
+      "label": "Muốn thêm",
+      "query": "more",
+      "id": 5508,
+      "file": "/pictograms/arasaac/muon-them.png",
+      "source": "https://static.arasaac.org/pictograms/5508/5508_500.png"
+    },
+    "Đủ rồi": {
+      "label": "Đủ rồi",
+      "query": "enough",
+      "id": 28429,
+      "file": "/pictograms/arasaac/du-roi.png",
+      "source": "https://static.arasaac.org/pictograms/28429/28429_500.png"
+    },
+    "Ngon": {
+      "label": "Ngon",
+      "query": "delicious",
+      "id": 32340,
+      "file": "/pictograms/arasaac/ngon.png",
+      "source": "https://static.arasaac.org/pictograms/32340/32340_500.png"
+    },
+    "Không thích": {
+      "label": "Không thích",
+      "query": "dislike",
+      "id": 6155,
+      "file": "/pictograms/arasaac/khong-thich.png",
+      "source": "https://static.arasaac.org/pictograms/6155/6155_500.png"
+    },
+    "No": {
+      "label": "No",
+      "query": "full",
+      "id": 4688,
+      "file": "/pictograms/arasaac/no.png",
+      "source": "https://static.arasaac.org/pictograms/4688/4688_500.png"
+    },
+    "Cơm gà": {
+      "label": "Cơm gà",
+      "query": "chicken",
+      "id": 2404,
+      "file": "/pictograms/arasaac/com-ga.png",
+      "source": "https://static.arasaac.org/pictograms/2404/2404_500.png"
+    },
+    "Trái cây": {
+      "label": "Trái cây",
+      "query": "fruit",
+      "id": 28339,
+      "file": "/pictograms/arasaac/trai-cay.png",
+      "source": "https://static.arasaac.org/pictograms/28339/28339_500.png"
+    },
+    "Sữa chua": {
+      "label": "Sữa chua",
+      "query": "yogurt",
+      "id": 2618,
+      "file": "/pictograms/arasaac/sua-chua.png",
+      "source": "https://static.arasaac.org/pictograms/2618/2618_500.png"
+    },
+    "Chọn món": {
+      "label": "Chọn món",
+      "query": "choose",
+      "id": 6483,
+      "file": "/pictograms/arasaac/chon-mon.png",
+      "source": "https://static.arasaac.org/pictograms/6483/6483_500.png"
+    },
+    "Ăn nữa": {
+      "label": "Ăn nữa",
+      "query": "eat",
+      "id": 2349,
+      "file": "/pictograms/arasaac/an-nua.png",
+      "source": "https://static.arasaac.org/pictograms/2349/2349_500.png"
+    },
+    "Để sau": {
+      "label": "Để sau",
+      "query": "later",
+      "id": 13080,
+      "file": "/pictograms/arasaac/de-sau.png",
+      "source": "https://static.arasaac.org/pictograms/13080/13080_500.png"
+    },
+    "Mặn": {
+      "label": "Mặn",
+      "query": "salty",
+      "id": 4739,
+      "file": "/pictograms/arasaac/man.png",
+      "source": "https://static.arasaac.org/pictograms/4739/4739_500.png"
+    },
+    "Ngọt": {
+      "label": "Ngọt",
+      "query": "sweet",
+      "id": 2686,
+      "file": "/pictograms/arasaac/ngot.png",
+      "source": "https://static.arasaac.org/pictograms/2686/2686_500.png"
+    },
+    "Nóng": {
+      "label": "Nóng",
+      "query": "hot",
+      "id": 2300,
+      "file": "/pictograms/arasaac/nong.png",
+      "source": "https://static.arasaac.org/pictograms/2300/2300_500.png"
+    },
+    "Lạnh": {
+      "label": "Lạnh",
+      "query": "cold",
+      "id": 4652,
+      "file": "/pictograms/arasaac/lanh.png",
+      "source": "https://static.arasaac.org/pictograms/4652/4652_500.png"
+    },
+    "Ăn hết": {
+      "label": "Ăn hết",
+      "query": "finish eating",
+      "id": 15475,
+      "file": "/pictograms/arasaac/an-het.png",
+      "source": "https://static.arasaac.org/pictograms/15475/15475_500.png"
+    },
+    "Ăn ít": {
+      "label": "Ăn ít",
+      "query": "eat little",
+      "id": 28885,
+      "file": "/pictograms/arasaac/an-it.png",
+      "source": "https://static.arasaac.org/pictograms/28885/28885_500.png"
+    },
+    "Uống nước": {
+      "label": "Uống nước",
+      "query": "drink water",
+      "id": 3172,
+      "file": "/pictograms/arasaac/uong-nuoc.png",
+      "source": "https://static.arasaac.org/pictograms/3172/3172_500.png"
+    },
+    "Nghỉ chút": {
+      "label": "Nghỉ chút",
+      "query": "rest",
+      "id": 3299,
+      "file": "/pictograms/arasaac/nghi-chut.png",
+      "source": "https://static.arasaac.org/pictograms/3299/3299_500.png"
+    },
+    "Khó chịu": {
+      "label": "Khó chịu",
+      "query": "uncomfortable",
+      "id": 32528,
+      "file": "/pictograms/arasaac/kho-chiu.png",
+      "source": "https://static.arasaac.org/pictograms/32528/32528_500.png"
+    },
+    "Món đó": {
+      "label": "Món đó",
+      "query": "food",
+      "id": 4610,
+      "file": "/pictograms/arasaac/mon-do.png",
+      "source": "https://static.arasaac.org/pictograms/4610/4610_500.png"
+    },
+    "Bữa sau": {
+      "label": "Bữa sau",
+      "query": "meal",
+      "id": 11627,
+      "file": "/pictograms/arasaac/bua-sau.png",
+      "source": "https://static.arasaac.org/pictograms/11627/11627_500.png"
+    },
+    "Ở nhà": {
+      "label": "Ở nhà",
+      "query": "home",
+      "id": 6964,
+      "file": "/pictograms/arasaac/o-nha.png",
+      "source": "https://static.arasaac.org/pictograms/6964/6964_500.png"
+    },
+    "Ở trường": {
+      "label": "Ở trường",
+      "query": "school",
+      "id": 3082,
+      "file": "/pictograms/arasaac/o-truong.png",
+      "source": "https://static.arasaac.org/pictograms/3082/3082_500.png"
+    },
+    "Ăn lại": {
+      "label": "Ăn lại",
+      "query": "eat again",
+      "id": 28885,
+      "file": "/pictograms/arasaac/an-lai.png",
+      "source": "https://static.arasaac.org/pictograms/28885/28885_500.png"
+    },
+    "Không muốn": {
+      "label": "Không muốn",
+      "query": "do not want",
+      "id": 39109,
+      "file": "/pictograms/arasaac/khong-muon.png",
+      "source": "https://static.arasaac.org/pictograms/39109/39109_500.png"
+    },
+    "Đổi món": {
+      "label": "Đổi món",
+      "query": "change",
+      "id": 8053,
+      "file": "/pictograms/arasaac/doi-mon.png",
+      "source": "https://static.arasaac.org/pictograms/8053/8053_500.png"
+    },
+    "Nước": {
+      "label": "Nước",
+      "query": "water",
+      "id": 2248,
+      "file": "/pictograms/arasaac/nuoc.png",
+      "source": "https://static.arasaac.org/pictograms/2248/2248_500.png"
+    },
+    "Sữa": {
+      "label": "Sữa",
+      "query": "milk",
+      "id": 2445,
+      "file": "/pictograms/arasaac/sua.png",
+      "source": "https://static.arasaac.org/pictograms/2445/2445_500.png"
+    },
+    "Nước cam": {
+      "label": "Nước cam",
+      "query": "orange juice",
+      "id": 2624,
+      "file": "/pictograms/arasaac/nuoc-cam.png",
+      "source": "https://static.arasaac.org/pictograms/2624/2624_500.png"
+    },
+    "Sinh tố": {
+      "label": "Sinh tố",
+      "query": "juice",
+      "id": 11461,
+      "file": "/pictograms/arasaac/sinh-to.png",
+      "source": "https://static.arasaac.org/pictograms/11461/11461_500.png"
+    },
+    "Uống ít": {
+      "label": "Uống ít",
+      "query": "drink",
+      "id": 2276,
+      "file": "/pictograms/arasaac/uong-it.png",
+      "source": "https://static.arasaac.org/pictograms/2276/2276_500.png"
+    },
+    "Mát": {
+      "label": "Mát",
+      "query": "cool",
+      "id": 27735,
+      "file": "/pictograms/arasaac/mat.png",
+      "source": "https://static.arasaac.org/pictograms/27735/27735_500.png"
+    },
+    "Đá bóng": {
+      "label": "Đá bóng",
+      "query": "football",
+      "id": 7137,
+      "file": "/pictograms/arasaac/da-bong.png",
+      "source": "https://static.arasaac.org/pictograms/7137/7137_500.png"
+    },
+    "Xếp hình": {
+      "label": "Xếp hình",
+      "query": "puzzle",
+      "id": 2540,
+      "file": "/pictograms/arasaac/xep-hinh.png",
+      "source": "https://static.arasaac.org/pictograms/2540/2540_500.png"
+    },
+    "Làm cùng mẹ": {
+      "label": "Làm cùng mẹ",
+      "query": "mother",
+      "id": 2458,
+      "file": "/pictograms/arasaac/lam-cung-me.png",
+      "source": "https://static.arasaac.org/pictograms/2458/2458_500.png"
+    },
+    "Làm tiếp": {
+      "label": "Làm tiếp",
+      "query": "continue",
+      "id": 24998,
+      "file": "/pictograms/arasaac/lam-tiep.png",
+      "source": "https://static.arasaac.org/pictograms/24998/24998_500.png"
+    },
+    "Dừng lại": {
+      "label": "Dừng lại",
+      "query": "stop",
+      "id": 2499,
+      "file": "/pictograms/arasaac/dung-lai.png",
+      "source": "https://static.arasaac.org/pictograms/2499/2499_500.png"
+    },
+    "Chán": {
+      "label": "Chán",
+      "query": "bored",
+      "id": 35531,
+      "file": "/pictograms/arasaac/chan.png",
+      "source": "https://static.arasaac.org/pictograms/35531/35531_500.png"
+    },
+    "Mẹ": {
+      "label": "Mẹ",
+      "query": "mother",
+      "id": 2458,
+      "file": "/pictograms/arasaac/me.png",
+      "source": "https://static.arasaac.org/pictograms/2458/2458_500.png"
+    },
+    "Ba": {
+      "label": "Ba",
+      "query": "father",
+      "id": 2497,
+      "file": "/pictograms/arasaac/ba.png",
+      "source": "https://static.arasaac.org/pictograms/2497/2497_500.png"
+    },
+    "Một mình": {
+      "label": "Một mình",
+      "query": "alone",
+      "id": 7253,
+      "file": "/pictograms/arasaac/mot-minh.png",
+      "source": "https://static.arasaac.org/pictograms/7253/7253_500.png"
+    },
+    "Chờ lượt": {
+      "label": "Chờ lượt",
+      "query": "wait turn",
+      "id": 35187,
+      "file": "/pictograms/arasaac/cho-luot.png",
+      "source": "https://static.arasaac.org/pictograms/35187/35187_500.png"
+    },
+    "Màu sắc": {
+      "label": "Màu sắc",
+      "query": "colors",
+      "id": 5968,
+      "file": "/pictograms/arasaac/mau-sac.png",
+      "source": "https://static.arasaac.org/pictograms/5968/5968_500.png"
+    },
+    "Âm nhạc": {
+      "label": "Âm nhạc",
+      "query": "music",
+      "id": 24795,
+      "file": "/pictograms/arasaac/am-nhac.png",
+      "source": "https://static.arasaac.org/pictograms/24795/24795_500.png"
+    },
+    "Trò chơi": {
+      "label": "Trò chơi",
+      "query": "game",
+      "id": 6170,
+      "file": "/pictograms/arasaac/tro-choi.png",
+      "source": "https://static.arasaac.org/pictograms/6170/6170_500.png"
+    },
+    "Cười": {
+      "label": "Cười",
+      "query": "laugh",
+      "id": 13354,
+      "file": "/pictograms/arasaac/cuoi.png",
+      "source": "https://static.arasaac.org/pictograms/13354/13354_500.png"
+    },
+    "Chạy": {
+      "label": "Chạy",
+      "query": "run",
+      "id": 2719,
+      "file": "/pictograms/arasaac/chay.png",
+      "source": "https://static.arasaac.org/pictograms/2719/2719_500.png"
+    },
+    "Tạo hình": {
+      "label": "Tạo hình",
+      "query": "build",
+      "id": 2713,
+      "file": "/pictograms/arasaac/tao-hinh.png",
+      "source": "https://static.arasaac.org/pictograms/2713/2713_500.png"
+    },
+    "Thắng lượt": {
+      "label": "Thắng lượt",
+      "query": "win",
+      "id": 7218,
+      "file": "/pictograms/arasaac/thang-luot.png",
+      "source": "https://static.arasaac.org/pictograms/7218/7218_500.png"
+    },
+    "Cơ thể": {
+      "label": "Cơ thể",
+      "query": "body",
+      "id": 2728,
+      "file": "/pictograms/arasaac/co-the.png",
+      "source": "https://static.arasaac.org/pictograms/2728/2728_500.png"
+    },
+    "Tiếng ồn": {
+      "label": "Tiếng ồn",
+      "query": "noise",
+      "id": 7157,
+      "file": "/pictograms/arasaac/tieng-on.png",
+      "source": "https://static.arasaac.org/pictograms/7157/7157_500.png"
+    },
+    "Ánh sáng": {
+      "label": "Ánh sáng",
+      "query": "light",
+      "id": 4604,
+      "file": "/pictograms/arasaac/anh-sang.png",
+      "source": "https://static.arasaac.org/pictograms/4604/4604_500.png"
+    },
+    "Phòng học": {
+      "label": "Phòng học",
+      "query": "classroom",
+      "id": 5913,
+      "file": "/pictograms/arasaac/phong-hoc.png",
+      "source": "https://static.arasaac.org/pictograms/5913/5913_500.png"
+    },
+    "Nghỉ": {
+      "label": "Nghỉ",
+      "query": "rest",
+      "id": 3299,
+      "file": "/pictograms/arasaac/nghi.png",
+      "source": "https://static.arasaac.org/pictograms/3299/3299_500.png"
+    },
+    "Muốn ôm": {
+      "label": "Muốn ôm",
+      "query": "hug",
+      "id": 4550,
+      "file": "/pictograms/arasaac/muon-om.png",
+      "source": "https://static.arasaac.org/pictograms/4550/4550_500.png"
+    },
+    "Nói nhỏ": {
+      "label": "Nói nhỏ",
+      "query": "whisper",
+      "id": 9037,
+      "file": "/pictograms/arasaac/noi-nho.png",
+      "source": "https://static.arasaac.org/pictograms/9037/9037_500.png"
+    },
+    "Giận": {
+      "label": "Giận",
+      "query": "angry",
+      "id": 2374,
+      "file": "/pictograms/arasaac/gian.png",
+      "source": "https://static.arasaac.org/pictograms/2374/2374_500.png"
+    },
+    "Sợ": {
+      "label": "Sợ",
+      "query": "scared",
+      "id": 2261,
+      "file": "/pictograms/arasaac/so.png",
+      "source": "https://static.arasaac.org/pictograms/2261/2261_500.png"
+    },
+    "Chỗ yên tĩnh": {
+      "label": "Chỗ yên tĩnh",
+      "query": "quiet place",
+      "id": 37312,
+      "file": "/pictograms/arasaac/cho-yen-tinh.png",
+      "source": "https://static.arasaac.org/pictograms/37312/37312_500.png"
+    },
+    "Ôm con": {
+      "label": "Ôm con",
+      "query": "hug",
+      "id": 4550,
+      "file": "/pictograms/arasaac/om-con.png",
+      "source": "https://static.arasaac.org/pictograms/4550/4550_500.png"
+    },
+    "Giúp con": {
+      "label": "Giúp con",
+      "query": "help",
+      "id": 4570,
+      "file": "/pictograms/arasaac/giup-con.png",
+      "source": "https://static.arasaac.org/pictograms/4570/4570_500.png"
+    },
+    "Nói chậm": {
+      "label": "Nói chậm",
+      "query": "speak slowly",
+      "id": 32133,
+      "file": "/pictograms/arasaac/noi-cham.png",
+      "source": "https://static.arasaac.org/pictograms/32133/32133_500.png"
+    },
+    "Đi ra ngoài": {
+      "label": "Đi ra ngoài",
+      "query": "go outside",
+      "id": 39109,
+      "file": "/pictograms/arasaac/di-ra-ngoai.png",
+      "source": "https://static.arasaac.org/pictograms/39109/39109_500.png"
+    },
+    "Đỡ hơn": {
+      "label": "Đỡ hơn",
+      "query": "better",
+      "id": 11470,
+      "file": "/pictograms/arasaac/do-hon.png",
+      "source": "https://static.arasaac.org/pictograms/11470/11470_500.png"
+    },
+    "Cần giúp": {
+      "label": "Cần giúp",
+      "query": "need help",
+      "id": 39109,
+      "file": "/pictograms/arasaac/can-giup.png",
+      "source": "https://static.arasaac.org/pictograms/39109/39109_500.png"
+    },
+    "Ghế nghỉ": {
+      "label": "Ghế nghỉ",
+      "query": "chair",
+      "id": 3155,
+      "file": "/pictograms/arasaac/ghe-nghi.png",
+      "source": "https://static.arasaac.org/pictograms/3155/3155_500.png"
+    },
+    "Ngồi gần": {
+      "label": "Ngồi gần",
+      "query": "sit",
+      "id": 6611,
+      "file": "/pictograms/arasaac/ngoi-gan.png",
+      "source": "https://static.arasaac.org/pictograms/6611/6611_500.png"
+    },
+    "Thở chậm": {
+      "label": "Thở chậm",
+      "query": "breathe",
+      "id": 34377,
+      "file": "/pictograms/arasaac/tho-cham.png",
+      "source": "https://static.arasaac.org/pictograms/34377/34377_500.png"
+    },
+    "Nói thêm": {
+      "label": "Nói thêm",
+      "query": "talk",
+      "id": 3345,
+      "file": "/pictograms/arasaac/noi-them.png",
+      "source": "https://static.arasaac.org/pictograms/3345/3345_500.png"
+    },
+    "An toàn": {
+      "label": "An toàn",
+      "query": "safe",
+      "id": 6068,
+      "file": "/pictograms/arasaac/an-toan.png",
+      "source": "https://static.arasaac.org/pictograms/6068/6068_500.png"
+    },
+    "Bình tĩnh": {
+      "label": "Bình tĩnh",
+      "query": "calm",
+      "id": 31310,
+      "file": "/pictograms/arasaac/binh-tinh.png",
+      "source": "https://static.arasaac.org/pictograms/31310/31310_500.png"
+    },
+    "Không biết": {
+      "label": "Không biết",
+      "query": "do not know",
+      "id": 39109,
+      "file": "/pictograms/arasaac/khong-biet.png",
+      "source": "https://static.arasaac.org/pictograms/39109/39109_500.png"
+    },
+    "Khó nói": {
+      "label": "Khó nói",
+      "query": "difficult",
+      "id": 4629,
+      "file": "/pictograms/arasaac/kho-noi.png",
+      "source": "https://static.arasaac.org/pictograms/4629/4629_500.png"
+    },
+    "Món ăn": {
+      "label": "Món ăn",
+      "query": "food",
+      "id": 4610,
+      "file": "/pictograms/arasaac/mon-an.png",
+      "source": "https://static.arasaac.org/pictograms/4610/4610_500.png"
+    }
+  },
+  "failures": [
+    {
+      "label": "Được khen",
+      "query": "reward",
+      "error": "No ARASAAC result for \"Được khen\" (reward)"
+    }
+  ]
+}

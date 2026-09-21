@@ -1,0 +1,8 @@
+ARASAAC pictograms
+
+Pictograms author: Sergio Palao.
+Origin: ARASAAC (https://www.arasaac.org).
+License: Creative Commons BY-NC-SA.
+Owner: Gobierno de Aragon (Spain).
+
+Images in this folder were downloaded from https://static.arasaac.org for this TalkTogether prototype.
