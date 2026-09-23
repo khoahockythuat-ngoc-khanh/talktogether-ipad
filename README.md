@@ -1,8 +1,9 @@
-# TalkTogether
+#  Dự án Khoa học Kỹ thuật 2026: SmartAAC
 
-**Dự án Khoa học Kỹ thuật 2026**
+Học sinh thực hiện: Nguyễn Vũ Mỹ Ngọc (11 Anh 3), Lê Tiến Khánh (11 Tin)
+Giáo viên hướng dẫn: Nguyễn Thị Kim Dung
 
-TalkTogether là một ứng dụng giao tiếp hỗ trợ trên iPad, được xây dựng nhằm giúp trẻ có khả năng ngôn ngữ hạn chế giao tiếp dễ dàng hơn với cha mẹ hoặc người hỗ trợ.
+SmartAAC là một ứng dụng giao tiếp hỗ trợ trên iPad, được xây dựng nhằm giúp trẻ có khả năng ngôn ngữ hạn chế giao tiếp dễ dàng hơn với cha mẹ hoặc người hỗ trợ.
 
 Ứng dụng kết hợp giao tiếp AAC (Augmentative and Alternative Communication) với AI để gợi ý câu hỏi và hỗ trợ duy trì cuộc trò chuyện theo ngữ cảnh.
 
