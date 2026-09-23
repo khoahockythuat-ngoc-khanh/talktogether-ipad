@@ -1,7 +1,8 @@
 #  Dự án Khoa học Kỹ thuật 2026: SmartAAC
 
-Học sinh thực hiện: Nguyễn Vũ Mỹ Ngọc (11 Anh 3), Lê Tiến Khánh (11 Tin)
-Giáo viên hướng dẫn: Nguyễn Thị Kim Dung
+**Học sinh thực hiện: Nguyễn Vũ Mỹ Ngọc (11 Anh 3), Lê Tiến Khánh (11 Tin) -- THPT Chuyên Lê Quý Đôn TP.HCM**
+
+**Giáo viên hướng dẫn: Nguyễn Thị Kim Dung**
 
 SmartAAC là một ứng dụng giao tiếp hỗ trợ trên iPad, được xây dựng nhằm giúp trẻ có khả năng ngôn ngữ hạn chế giao tiếp dễ dàng hơn với cha mẹ hoặc người hỗ trợ.
 
