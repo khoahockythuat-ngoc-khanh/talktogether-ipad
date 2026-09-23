@@ -50,7 +50,7 @@ export function getFollowupQuestions(topic: Topic | null, response: string): str
   if (topic?.id === 'school') {
     if (responseIncludesAny(response, ['Cô giáo', 'Làm xong', 'Tự hào'])) suggested.push('Con muốn kể thêm về cô giáo không?');
     if (responseIncludesAny(response, ['Bạn', 'Bạn thân', 'Nhóm bạn', 'Chơi cầu trượt'])) suggested.push('Con muốn kể thêm về bạn nào?');
-    if (responseIncludesAny(response, ['Khó', 'Giúp con', 'Lo', 'Khó nói'])) suggested.push('Mẹ có thể giúp con ở phần nào?');
+    if (responseIncludesAny(response, ['Khó', 'Cần giúp', 'Giúp con', 'Lo', 'Khó nói'])) suggested.push('Mẹ có thể giúp con ở phần nào?');
     if (responseIncludesAny(response, ['Ăn trưa', 'Cơm', 'Phở', 'Bánh mì', 'Súp', 'No', 'Ngon'])) suggested.push('Bữa trưa ở trường con ăn gì?');
     if (responseIncludesAny(response, ['Sân chơi', 'Chơi', 'Chạy', 'Chờ lượt'])) suggested.push('Giờ ra chơi con làm gì?');
   }
@@ -78,7 +78,7 @@ export function getFollowupQuestions(topic: Topic | null, response: string): str
     if (responseIncludesAny(response, ['Mẹ', 'Muốn ôm', 'Ngồi gần', 'An toàn', 'Bình tĩnh', 'Lo'])) suggested.push('Con muốn ở chỗ yên tĩnh hay gần mẹ?');
     if (responseIncludesAny(response, ['Nói nhỏ', 'Nói chậm', 'Khó nói', 'Không biết'])) suggested.push('Mẹ nên nói nhỏ hay nói chậm với con?');
     if (responseIncludesAny(response, ['Buồn', 'Giận', 'Sợ'])) suggested.push('Điều gì làm con buồn hoặc sợ?');
-    if (responseIncludesAny(response, ['Giúp con'])) suggested.push('Mẹ có thể giúp con thế nào?');
+    if (responseIncludesAny(response, ['Cần giúp', 'Giúp con'])) suggested.push('Mẹ có thể giúp con thế nào?');
   }
 
   if (positive) suggested.push('Điều gì làm con vui nhất?');

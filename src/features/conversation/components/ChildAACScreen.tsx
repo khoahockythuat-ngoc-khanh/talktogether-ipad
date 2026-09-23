@@ -3,11 +3,11 @@
 import { useEffect, useState } from 'react';
 import type { SyntheticEvent } from 'react';
 
-import { CARD_CATEGORY_ORDER, CATEGORY_LABELS, QUICK_RESPONSES } from '../data/constants';
+import { CARD_CATEGORY_ORDER, CATEGORY_LABELS } from '../data/constants';
 import { getCardPageCount, getCardsForQuestion } from '../logic/cards';
 import { pictogramPath } from '../logic/pictograms';
 import type { Card, Topic } from '../types';
-import { Header, Progress, TurnActionButtons } from './shared';
+import { Progress, TurnActionButtons } from './shared';
 
 type ChildAACScreenProps = {
   topic: Topic;
@@ -22,7 +22,7 @@ type ChildAACScreenProps = {
   onBack: () => void;
 };
 
-export function ChildAACScreen({ topic, question, selected, aiCards, onToggle, onQuick, onReset, onSpeak, onEndConversation, onBack }: ChildAACScreenProps) {
+export function ChildAACScreen({ topic, question, selected, aiCards, onToggle, onReset, onSpeak, onEndConversation, onBack }: ChildAACScreenProps) {
   const [cardPage, setCardPage] = useState(0);
   const fallbackPageCount = getCardPageCount(topic, question);
   const hasAiCards = Boolean(aiCards?.length);
@@ -37,6 +37,7 @@ export function ChildAACScreen({ topic, question, selected, aiCards, onToggle, o
   }));
   const sentence = selected.map((card) => card[1]).join(' · ');
   const hasMoreCards = cardPageCount > 1;
+  const selectedTokens = selected.length ? selected : [];
 
   useEffect(() => {
     setCardPage(0);
@@ -48,91 +49,142 @@ export function ChildAACScreen({ topic, question, selected, aiCards, onToggle, o
   }
 
   return (
-    <main className="screen child-screen">
-      <Header title="Lượt của An" subtitle="Chọn thẻ để trả lời" onBack={onBack} />
-      <Progress step={2} />
-      <section className="prompt-card child-prompt-card">
-        <span>👩‍👦</span>
-        <div>
-          <small>Mẹ hỏi</small>
-          <strong>“{question}”</strong>
+    <main className="screen child-screen aac-board-screen">
+      <section className="board-sentence-strip" aria-label="Câu trả lời của An">
+        <button className="board-back-button" onClick={onBack} type="button" aria-label="Quay lại">
+          ‹
+        </button>
+        <div className="sentence-tokens">
+          {selectedTokens.length ? (
+            selectedTokens.map((card) => (
+              <button
+                className={`sentence-token ${card[2]}`}
+                key={card[1]}
+                onClick={() => onToggle(card)}
+                type="button"
+                aria-label={`Bỏ thẻ ${card[1]}`}
+              >
+                <span className="sentence-token-icon">
+                  <img
+                    src={pictogramPath(card[1])}
+                    alt=""
+                    aria-hidden="true"
+                    onError={(event: SyntheticEvent<HTMLImageElement>) => {
+                      event.currentTarget.hidden = true;
+                      const fallback = event.currentTarget.nextElementSibling;
+                      if (fallback instanceof HTMLElement) fallback.hidden = false;
+                    }}
+                  />
+                  <span hidden aria-hidden="true">{card[0]}</span>
+                </span>
+                <strong>{card[1]}</strong>
+              </button>
+            ))
+          ) : (
+            <div className="sentence-placeholder">
+              <small>Câu của An</small>
+              <strong>Chạm vào thẻ để tạo câu trả lời</strong>
+            </div>
+          )}
         </div>
+        <div className="board-toolset compact">
+          <button
+            className="board-tool clear"
+            disabled={!sentence}
+            onClick={onReset}
+            type="button"
+            aria-label="Chọn lại"
+          >
+            ⌫
+          </button>
+        </div>
+      </section>
+
+      <section className="board-workspace">
+        <aside className="board-rail" aria-label="Nhóm thẻ">
+          <button className="rail-button active" onClick={onBack} type="button" aria-label="Quay lại chọn câu hỏi">
+            ⌂
+          </button>
+          <span className="rail-button">●</span>
+          <span className="rail-button muted">☺</span>
+          <span className="rail-button muted">≋</span>
+          <span className="rail-button muted">◫</span>
+          <button
+            className="rail-refresh"
+            onClick={showMoreCards}
+            type="button"
+            disabled={!hasMoreCards}
+            aria-label="Thêm thẻ trả lời"
+          >
+            ↻
+          </button>
+        </aside>
+        <div className="board-content">
+          <section className="board-question-card">
+            <span>👩‍👦</span>
+            <div>
+              <small>Mẹ hỏi</small>
+              <strong>“{question}”</strong>
+            </div>
+            <em>{cardPage + 1}/{cardPageCount}</em>
+          </section>
+          <Progress step={2} />
+          <section className="aac-columns" aria-label="Thẻ trả lời của An">
+            {cardColumns.map(({ category, label, cards }) => (
+              <div className="aac-column" key={category}>
+                <h2 className={`aac-column-title ${category}`}>{label}</h2>
+                <div className="aac-column-cards">
+                  {cards.map((card) => {
+                    const active = selected.some((item) => item[1] === card[1]);
+                    return (
+                      <button
+                        key={card[1]}
+                        className={`aac-card ${card[2]} ${active ? 'active' : ''}`}
+                        onClick={() => onToggle(card)}
+                        aria-label={`${label}: ${card[1]}`}
+                      >
+                        <span className="aac-symbol">
+                          <img
+                            className="aac-pictogram"
+                            src={pictogramPath(card[1])}
+                            alt=""
+                            aria-hidden="true"
+                            onError={(event: SyntheticEvent<HTMLImageElement>) => {
+                              event.currentTarget.hidden = true;
+                              const fallback = event.currentTarget.nextElementSibling;
+                              if (fallback instanceof HTMLElement) fallback.hidden = false;
+                            }}
+                          />
+                          <span className="aac-emoji-fallback" hidden aria-hidden="true">{card[0]}</span>
+                        </span>
+                        <strong>{card[1]}</strong>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </section>
+        </div>
+      </section>
+
+      <section className="board-bottom-bar">
         <button
-          className="more-cards-button"
+          className="board-more-button"
           onClick={showMoreCards}
           type="button"
           disabled={!hasMoreCards}
           aria-label="Thêm thẻ trả lời"
         >
-          <span aria-hidden="true">↻</span>
+          <span>↻</span>
           <strong>Thêm thẻ</strong>
-          <small>{cardPage + 1}/{cardPageCount}</small>
         </button>
+        <TurnActionButtons
+          doneDisabled={!sentence}
+          onDone={() => onSpeak(sentence)}
+          onEnd={() => onEndConversation(sentence)}
+        />
       </section>
-      <section className="aac-columns" aria-label="Thẻ trả lời của An">
-        {cardColumns.map(({ category, label, cards }) => (
-          <div className="aac-column" key={category}>
-            <h2 className={`aac-column-title ${category}`}>{label}</h2>
-            <div className="aac-column-cards">
-              {cards.map((card) => {
-                const active = selected.some((item) => item[1] === card[1]);
-                return (
-                  <button
-                    key={card[1]}
-                    className={`aac-card ${card[2]} ${active ? 'active' : ''}`}
-                    onClick={() => onToggle(card)}
-                    aria-label={`${label}: ${card[1]}`}
-                  >
-                    <span className="aac-symbol">
-                      <img
-                        className="aac-pictogram"
-                        src={pictogramPath(card[1])}
-                        alt=""
-                        aria-hidden="true"
-                        onError={(event: SyntheticEvent<HTMLImageElement>) => {
-                          event.currentTarget.hidden = true;
-                          const fallback = event.currentTarget.nextElementSibling;
-                          if (fallback instanceof HTMLElement) fallback.hidden = false;
-                        }}
-                      />
-                      <span className="aac-emoji-fallback" hidden aria-hidden="true">{card[0]}</span>
-                    </span>
-                    <strong>{card[1]}</strong>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        ))}
-      </section>
-      <section className="quick-row">
-        {QUICK_RESPONSES.map(([icon, label]) => {
-          const quickCard: Card = [icon, label, 'quick'];
-          return (
-            <button key={label} onClick={() => onQuick(quickCard)}>
-              <span className="quick-icon">{icon}</span>
-              <span>{label}</span>
-            </button>
-          );
-        })}
-      </section>
-      <section className={`sentence-bar ${sentence ? 'ready' : ''}`}>
-        <div className="sentence-bar-top">
-          <small>Câu của An</small>
-          {sentence ? (
-            <button className="reset-response-button" onClick={onReset} type="button">
-              <span aria-hidden="true">↺</span>
-              <span>Chọn lại</span>
-            </button>
-          ) : null}
-        </div>
-        <strong>{sentence || 'Chạm vào các thẻ để tạo câu trả lời'}</strong>
-      </section>
-      <TurnActionButtons
-        doneDisabled={!sentence}
-        onDone={() => onSpeak(sentence)}
-        onEnd={() => onEndConversation(sentence)}
-      />
     </main>
   );
 }

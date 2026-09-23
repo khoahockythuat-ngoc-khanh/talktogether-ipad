@@ -198,16 +198,33 @@ function cardPrompt(topic: Topic, question: string, profile?: AiProfileContext):
     const label = category === 'topic' ? 'Chủ đề' : category === 'action' ? 'Hành động' : 'Cảm xúc';
     return `${label}: ${labels}`;
   }).join('\n');
+  const localCards = fallbackCards(topic, question);
+  const suggestedLines = CARD_CATEGORIES.map((category) => {
+    const labels = localCards
+      .filter((card) => card[2] === category)
+      .map((card) => card[1])
+      .join(', ');
+    const label = category === 'topic' ? 'Chủ đề' : category === 'action' ? 'Hành động' : 'Cảm xúc';
+    return `${label}: ${labels}`;
+  }).join('\n');
 
   return [
     `Chủ đề mẹ đã chọn: ${topic.title}.`,
     `Câu hỏi của mẹ: "${question}"`,
     '',
     'Hãy chọn đúng 4 thẻ cho mỗi cột để An trả lời câu hỏi này.',
+    'Cột Chủ đề chỉ gồm người, nơi, vật, món, môn học hoặc hoạt động được nói tới.',
+    'Cột Hành động chỉ gồm việc An có thể làm, muốn làm, muốn nhờ hoặc muốn dừng.',
+    'Cột Cảm xúc chỉ gồm cảm xúc, sở thích, trạng thái cơ thể hoặc mức độ dễ/khó.',
+    'Không đặt cảm xúc vào cột hành động. Không đặt hành động vào cột chủ đề.',
     'Chỉ dùng label có trong danh sách cho phép bên dưới. Không tự tạo label mới.',
-    'Thẻ phải sát câu hỏi. Ví dụ hỏi về ăn uống thì ưu tiên món ăn, hành động ăn/uống, cảm xúc vị giác.',
+    'Ưu tiên bộ gợi ý local vì bộ này đã được map theo ngữ cảnh câu hỏi. Chỉ thay một thẻ nếu thẻ thay thế sát câu hỏi hơn rõ ràng.',
+    'Thẻ phải ngắn, quen thuộc, cụ thể và dễ hiểu với trẻ. Tránh thẻ quá chung nếu có thẻ cụ thể hơn.',
     'Nếu profile có dữ liệu, ưu tiên các thẻ quen thuộc của An khi vẫn phù hợp với câu hỏi.',
     ...profileLines(profile),
+    '',
+    'Bộ gợi ý local theo ngữ cảnh:',
+    suggestedLines,
     '',
     'Danh sách cho phép:',
     allowedLines,
@@ -232,8 +249,11 @@ function followupPrompt(
     '',
     `Hãy gợi ý ${PARENT_QUESTION_LIMIT} câu hỏi tiếp theo cho mẹ.`,
     'Câu hỏi phải ngắn, tự nhiên, bằng tiếng Việt, phù hợp để hỏi trẻ.',
+    'Mỗi câu chỉ hỏi một ý cụ thể. Ưu tiên hỏi tiếp theo chính thẻ An vừa chọn.',
     'Không hỏi dồn dập, không phán xét, không dùng từ chuyên môn.',
-    'Không lặp lại y nguyên câu đã hỏi.',
+    'Không lặp lại y nguyên câu đã hỏi hoặc câu đã có trong buổi này.',
+    'Nếu An chọn cảm xúc khó chịu, mệt, lo, sợ hoặc buồn, ưu tiên câu hỏi hỗ trợ và điều chỉnh môi trường.',
+    'Nếu An chọn món ăn, hoạt động hoặc người cụ thể, ưu tiên câu hỏi nối tiếp về chi tiết đó.',
     '',
     'Trả về JSON dạng: {"questions":["...","...","...","...","..."]}',
   ].filter(Boolean).join('\n');

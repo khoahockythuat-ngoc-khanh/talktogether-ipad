@@ -23,12 +23,12 @@ export const CARD_BANKS = {
   },
   schoolRepeat: {
     topic: [['📚', 'Học bài'], ['⚽️', 'Chơi'], ['🎨', 'Vẽ tranh'], ['📖', 'Đọc sách']],
-    action: [['🔁', 'Làm tiếp'], ['🛝', 'Chơi cầu trượt'], ['✅', 'Làm xong'], ['💬', 'Kể chuyện']],
+    action: [['🔁', 'Làm tiếp'], ['▶️', 'Chơi tiếp'], ['✅', 'Làm xong'], ['💬', 'Kể chuyện']],
     emotion: [['🤩', 'Mong chờ'], ['😀', 'Vui'], ['👍', 'Thích'], ['😐', 'Bình thường']],
   },
   schoolTomorrow: {
     topic: [['📚', 'Học bài'], ['📖', 'Đọc sách'], ['🎨', 'Vẽ tranh'], ['👫', 'Bạn bè']],
-    action: [['📚', 'Đọc'], ['⚽️', 'Chơi tiếp'], ['💬', 'Nói chuyện'], ['🖍️', 'Tô màu']],
+    action: [['📚', 'Học tiếp'], ['▶️', 'Chơi tiếp'], ['💬', 'Nói chuyện'], ['🖍️', 'Tô màu']],
     emotion: [['🤩', 'Mong chờ'], ['😀', 'Vui'], ['😐', 'Bình thường'], ['😟', 'Lo']],
   },
   schoolPlay: {
@@ -38,7 +38,7 @@ export const CARD_BANKS = {
   },
   schoolDifficulty: {
     topic: [['🔢', 'Toán'], ['📖', 'Tiếng Việt'], ['🔤', 'Tiếng Anh'], ['🎨', 'Mỹ thuật']],
-    action: [['📚', 'Đọc'], ['✏️', 'Viết'], ['🔢', 'Đếm số'], ['🆘', 'Giúp con']],
+    action: [['📚', 'Đọc'], ['✏️', 'Viết'], ['🔢', 'Đếm số'], ['🆘', 'Cần giúp']],
     emotion: [['🧩', 'Khó'], ['🙂', 'Dễ'], ['😐', 'Bình thường'], ['😌', 'Tự hào']],
   },
   schoolPeopleMoment: {
@@ -53,7 +53,7 @@ export const CARD_BANKS = {
   },
   foodMeals: {
     topic: [['🍚', 'Cơm'], ['🍜', 'Phở'], ['🥖', 'Bánh mì'], ['🥣', 'Súp']],
-    action: [['🍽️', 'Ăn'], ['✅', 'Ăn hết'], ['🥄', 'Ăn ít'], ['➕', 'Ăn thêm']],
+    action: [['🍽️', 'Ăn'], ['✅', 'Ăn hết'], ['🥄', 'Ăn ít'], ['✅', 'Đủ rồi']],
     emotion: [['😋', 'Ngon'], ['👍', 'Thích'], ['🙅', 'Không thích'], ['🙂', 'No rồi']],
   },
   foodFavorites: {
@@ -62,22 +62,22 @@ export const CARD_BANKS = {
     emotion: [['🤩', 'Rất thích'], ['😋', 'Ngon'], ['🙂', 'Bình thường'], ['🙅', 'Không thích']],
   },
   foodTaste: {
-    topic: [['🍽️', 'Món đó'], ['🧂', 'Mặn'], ['🍯', 'Ngọt'], ['♨️', 'Nóng']],
+    topic: [['🍽️', 'Món ăn'], ['🧂', 'Mặn'], ['🍯', 'Ngọt'], ['♨️', 'Nóng']],
     action: [['🥄', 'Ăn ít'], ['🥤', 'Uống nước'], ['✅', 'Đủ rồi'], ['🔄', 'Đổi món']],
     emotion: [['😋', 'Ngon'], ['🙂', 'Bình thường'], ['🙅', 'Không thích'], ['😣', 'Khó chịu']],
   },
   foodAgain: {
-    topic: [['🍽️', 'Món đó'], ['🍚', 'Cơm'], ['🍜', 'Phở'], ['🥣', 'Súp']],
-    action: [['🍽️', 'Ăn'], ['🙅', 'Không thích'], ['⏰', 'Để sau'], ['🔄', 'Đổi món']],
-    emotion: [['👍', 'Thích'], ['😋', 'Ngon'], ['🙂', 'Bình thường'], ['😐', 'Chán']],
+    topic: [['🍽️', 'Món ăn'], ['🍚', 'Cơm'], ['🍜', 'Phở'], ['🥣', 'Súp']],
+    action: [['🔁', 'Ăn lại'], ['✅', 'Đủ rồi'], ['⏰', 'Để sau'], ['🔄', 'Đổi món']],
+    emotion: [['👍', 'Thích'], ['😋', 'Ngon'], ['🙂', 'Bình thường'], ['🙅', 'Không thích']],
   },
   foodDrink: {
     topic: [['💧', 'Nước'], ['🥛', 'Sữa'], ['🍊', 'Nước cam'], ['🥤', 'Sinh tố']],
-    action: [['🥤', 'Uống'], ['➕', 'Uống thêm'], ['💧', 'Uống nước'], ['✅', 'Đủ rồi']],
+    action: [['🥤', 'Uống'], ['💧', 'Uống nước'], ['🥤', 'Uống ít'], ['✅', 'Đủ rồi']],
     emotion: [['👍', 'Thích'], ['🧊', 'Mát'], ['😋', 'Ngon'], ['🙅', 'Không thích']],
   },
   foodEnough: {
-    topic: [['🍽️', 'Món đó'], ['🍚', 'Cơm'], ['🥣', 'Súp'], ['🥛', 'Sữa chua']],
+    topic: [['🍽️', 'Món ăn'], ['🍚', 'Cơm'], ['🥣', 'Súp'], ['🥛', 'Sữa chua']],
     action: [['➕', 'Ăn thêm'], ['✅', 'Đủ rồi'], ['🥄', 'Ăn ít'], ['💧', 'Uống nước']],
     emotion: [['🙂', 'No rồi'], ['😋', 'Ngon'], ['😐', 'Bình thường'], ['🙅', 'Không thích']],
   },
@@ -87,7 +87,7 @@ export const CARD_BANKS = {
     emotion: [['🙅', 'Không thích'], ['😣', 'Khó chịu'], ['😐', 'Chán'], ['🙂', 'Bình thường']],
   },
   foodTemperature: {
-    topic: [['♨️', 'Nóng'], ['🧊', 'Lạnh'], ['🧊', 'Mát'], ['🍽️', 'Món đó']],
+    topic: [['♨️', 'Nóng'], ['🧊', 'Lạnh'], ['🧊', 'Mát'], ['🍽️', 'Món ăn']],
     action: [['💧', 'Uống nước'], ['⏰', 'Để sau'], ['🥄', 'Ăn ít'], ['✅', 'Đủ rồi']],
     emotion: [['😋', 'Ngon'], ['😣', 'Khó chịu'], ['🙂', 'Bình thường'], ['🙅', 'Không thích']],
   },
@@ -98,7 +98,7 @@ export const CARD_BANKS = {
   },
   activitiesChoice: {
     topic: [['🎨', 'Vẽ'], ['⚽️', 'Đá bóng'], ['🧩', 'Xếp hình'], ['📖', 'Đọc sách']],
-    action: [['▶️', 'Chơi'], ['👩', 'Làm cùng mẹ'], ['🔁', 'Làm tiếp'], ['⏸️', 'Nghỉ chút']],
+    action: [['▶️', 'Chơi'], ['▶️', 'Chơi tiếp'], ['👩', 'Làm cùng mẹ'], ['⏸️', 'Nghỉ chút']],
     emotion: [['😀', 'Vui'], ['🤩', 'Rất thích'], ['😐', 'Bình thường'], ['😕', 'Chán']],
   },
   activitiesFavorite: {
@@ -108,7 +108,7 @@ export const CARD_BANKS = {
   },
   activitiesPartner: {
     topic: [['👩', 'Mẹ'], ['👨', 'Ba'], ['👫', 'Bạn bè'], ['🙂', 'Một mình']],
-    action: [['🛝', 'Chơi cầu trượt'], ['💬', 'Nói chuyện'], ['⏳', 'Chờ lượt'], ['🤲', 'Chia sẻ']],
+    action: [['👩', 'Làm cùng mẹ'], ['💬', 'Nói chuyện'], ['🤲', 'Chia sẻ'], ['⏳', 'Chờ lượt']],
     emotion: [['😀', 'Vui'], ['👍', 'Thích'], ['😳', 'Ngại'], ['😐', 'Bình thường']],
   },
   activitiesFun: {
@@ -118,7 +118,7 @@ export const CARD_BANKS = {
   },
   activitiesPlace: {
     topic: [['🛝', 'Sân chơi'], ['🏠', 'Ở nhà'], ['🏫', 'Ở trường'], ['🤫', 'Chỗ yên tĩnh']],
-    action: [['▶️', 'Chơi'], ['🏃', 'Chạy'], ['⏳', 'Chờ lượt'], ['⏸️', 'Nghỉ chút']],
+    action: [['▶️', 'Chơi'], ['🛝', 'Chơi cầu trượt'], ['🏃', 'Chạy'], ['⏸️', 'Nghỉ chút']],
     emotion: [['😀', 'Vui'], ['🤩', 'Hào hứng'], ['🙂', 'Bình tĩnh'], ['😕', 'Chán']],
   },
   activitiesContinue: {
@@ -133,13 +133,13 @@ export const CARD_BANKS = {
   },
   activitiesMovement: {
     topic: [['⚽️', 'Đá bóng'], ['🛝', 'Sân chơi'], ['🧍', 'Cơ thể'], ['🛋️', 'Chỗ nghỉ']],
-    action: [['🏃', 'Chạy'], ['▶️', 'Chơi'], ['🛋️', 'Nghỉ'], ['💧', 'Uống nước']],
+    action: [['🏃', 'Chạy'], ['⚽️', 'Đá bóng'], ['🛋️', 'Nghỉ'], ['💧', 'Uống nước']],
     emotion: [['😴', 'Mệt'], ['🤩', 'Hào hứng'], ['😀', 'Vui'], ['😐', 'Bình thường']],
   },
   feelingsNow: {
-    topic: [['🧍', 'Cơ thể'], ['🔊', 'Tiếng ồn'], ['💡', 'Ánh sáng'], ['🏫', 'Phòng học']],
+    topic: [['🧍', 'Cơ thể'], ['🔊', 'Tiếng ồn'], ['💡', 'Ánh sáng'], ['🛋️', 'Chỗ nghỉ']],
     action: [['🛋️', 'Nghỉ'], ['💧', 'Uống nước'], ['🤗', 'Muốn ôm'], ['🗣️', 'Nói nhỏ']],
-    emotion: [['😀', 'Vui'], ['😢', 'Buồn'], ['😡', 'Giận'], ['😨', 'Sợ']],
+    emotion: [['😀', 'Vui'], ['😢', 'Buồn'], ['😴', 'Mệt'], ['😨', 'Sợ']],
   },
   feelingsUncomfortable: {
     topic: [['🔊', 'Tiếng ồn'], ['💡', 'Ánh sáng'], ['🏫', 'Phòng học'], ['🧍', 'Cơ thể']],
@@ -148,7 +148,7 @@ export const CARD_BANKS = {
   },
   feelingsHelp: {
     topic: [['👩', 'Mẹ'], ['👨', 'Ba'], ['👩‍🏫', 'Cô giáo'], ['🤫', 'Chỗ yên tĩnh']],
-    action: [['🤗', 'Muốn ôm'], ['🆘', 'Giúp con'], ['⏳', 'Nói chậm'], ['🤝', 'Ngồi gần']],
+    action: [['🤗', 'Muốn ôm'], ['🆘', 'Cần giúp'], ['⏳', 'Nói chậm'], ['🤝', 'Ngồi gần']],
     emotion: [['😌', 'Đỡ hơn'], ['😟', 'Lo'], ['😴', 'Mệt'], ['😣', 'Khó nói']],
   },
   feelingsComfort: {
@@ -162,8 +162,8 @@ export const CARD_BANKS = {
     emotion: [['😌', 'An toàn'], ['🙂', 'Bình tĩnh'], ['😟', 'Lo'], ['😣', 'Khó nói']],
   },
   feelingsBody: {
-    topic: [['🧍', 'Cơ thể'], ['🔊', 'Tiếng ồn'], ['💡', 'Ánh sáng'], ['🏫', 'Phòng học']],
-    action: [['🛋️', 'Nghỉ'], ['💧', 'Uống nước'], ['🆘', 'Giúp con'], ['🗣️', 'Nói nhỏ']],
+    topic: [['🧍', 'Cơ thể'], ['🛋️', 'Chỗ nghỉ'], ['💧', 'Nước'], ['🤫', 'Chỗ yên tĩnh']],
+    action: [['🛋️', 'Nghỉ'], ['💧', 'Uống nước'], ['🆘', 'Cần giúp'], ['🗣️', 'Nói nhỏ']],
     emotion: [['😴', 'Mệt'], ['😣', 'Khó chịu'], ['😨', 'Sợ'], ['😐', 'Bình thường']],
   },
   feelingsQuiet: {
@@ -173,12 +173,12 @@ export const CARD_BANKS = {
   },
   feelingsSpeak: {
     topic: [['👩', 'Mẹ'], ['🤫', 'Chỗ yên tĩnh'], ['🔊', 'Tiếng ồn'], ['🏫', 'Phòng học']],
-    action: [['🗣️', 'Nói nhỏ'], ['⏳', 'Nói chậm'], ['💬', 'Nói thêm'], ['💬', 'Kể chuyện']],
+    action: [['🗣️', 'Nói nhỏ'], ['⏳', 'Nói chậm'], ['🔁', 'Nói lại'], ['⏹️', 'Dừng lại']],
     emotion: [['😣', 'Khó nói'], ['😟', 'Lo'], ['🙂', 'Bình tĩnh'], ['😴', 'Mệt']],
   },
   feelingsUpset: {
     topic: [['🔊', 'Tiếng ồn'], ['💡', 'Ánh sáng'], ['👫', 'Bạn bè'], ['🧍', 'Cơ thể']],
-    action: [['💬', 'Nói thêm'], ['⏸️', 'Nghỉ chút'], ['🆘', 'Giúp con'], ['🤫', 'Chỗ yên tĩnh']],
+    action: [['💬', 'Nói thêm'], ['⏸️', 'Nghỉ chút'], ['🆘', 'Cần giúp'], ['🤫', 'Chỗ yên tĩnh']],
     emotion: [['😢', 'Buồn'], ['😡', 'Giận'], ['😨', 'Sợ'], ['😣', 'Khó chịu']],
   },
   feelingsRest: {
@@ -188,7 +188,7 @@ export const CARD_BANKS = {
   },
   generalMore: {
     topic: [['👩', 'Mẹ'], ['👩‍🏫', 'Cô giáo'], ['👫', 'Bạn bè'], ['🏠', 'Ở nhà']],
-    action: [['💬', 'Kể chuyện'], ['💬', 'Nói thêm'], ['🗣️', 'Nói chậm'], ['⏸️', 'Nghỉ chút']],
+    action: [['💬', 'Kể chuyện'], ['💬', 'Nói thêm'], ['🔁', 'Nói lại'], ['⏸️', 'Nghỉ chút']],
     emotion: [['😀', 'Vui'], ['😟', 'Lo'], ['😐', 'Bình thường'], ['😣', 'Khó nói']],
   },
   happinessReason: {

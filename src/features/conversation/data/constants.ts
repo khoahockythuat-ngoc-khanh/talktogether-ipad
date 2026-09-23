@@ -21,4 +21,5 @@ export const PICTOGRAM_LABEL_ALIASES: Partial<Record<string, string>> = {
   'Chỗ nghỉ': 'Ghế nghỉ',
   'No rồi': 'No',
   'Thắng': 'Thắng lượt',
+  'Cần giúp': 'Cần giúp',
 };

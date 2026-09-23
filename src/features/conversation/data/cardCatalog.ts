@@ -14,6 +14,7 @@ const CARD_ALIASES: Partial<Record<string, readonly string[]>> = {
   'Không thích': ['Không muốn'],
   'Chỗ nghỉ': ['Ghế nghỉ', 'Nơi nghỉ'],
   'Nói nhỏ': ['Nói khẽ'],
+  'Cần giúp': ['Giúp con', 'Mẹ giúp'],
 };
 
 function slug(label: string): string {
@@ -73,6 +74,9 @@ function buildCatalog(): readonly CardDefinition[] {
 export const CARD_CATALOG = buildCatalog();
 export const CARD_CATALOG_BY_ID = new Map(CARD_CATALOG.map((card) => [card.id, card]));
 export const CARD_CATALOG_BY_LABEL = new Map(CARD_CATALOG.map((card) => [card.label, card]));
+export const CARD_CATALOG_BY_CATEGORY_LABEL = new Map(
+  CARD_CATALOG.map((card) => [`${card.category}:${card.label}`, card]),
+);
 
 export function getCardDefinition(labelOrId: string): CardDefinition | null {
   return CARD_CATALOG_BY_ID.get(labelOrId) || CARD_CATALOG_BY_LABEL.get(labelOrId) || null;
@@ -87,7 +91,7 @@ export function cardIdsForLabels(labels: readonly string[]): string[] {
 }
 
 export function cardToDefinition(card: Card): CardDefinition | null {
-  return getCardDefinition(card[1]);
+  return CARD_CATALOG_BY_CATEGORY_LABEL.get(`${card[2]}:${card[1]}`) || getCardDefinition(card[1]);
 }
 
 export function cardToId(card: Card): string {
@@ -107,7 +111,7 @@ export function allCardLabelsForCategory(category: CoreCardCategory): string[] {
 }
 
 export function bankCardForLabel(category: CoreCardCategory, label: string): BankCard | null {
-  const card = getCardDefinition(label);
-  if (!card || card.category !== category) return null;
+  const card = CARD_CATALOG_BY_CATEGORY_LABEL.get(`${category}:${label}`);
+  if (!card) return null;
   return [card.icon, card.label];
 }

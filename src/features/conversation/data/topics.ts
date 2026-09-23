@@ -103,7 +103,7 @@ export const TOPICS = [
     homePictogram: 'Vui',
     title: 'Cảm xúc',
     subtitle: 'Tâm trạng, cơ thể, nhu cầu',
-    homeTags: ['Vui / buồn', 'Mệt', 'Giúp con'],
+    homeTags: ['Vui / buồn', 'Mệt', 'Cần giúp'],
     questions: [
       'Bây giờ con cảm thấy thế nào?',
       'Có điều gì làm con không thoải mái không?',
@@ -116,7 +116,7 @@ export const TOPICS = [
     ],
     cards: [
       ['🤗', 'Muốn ôm', 'action'],
-      ['🆘', 'Giúp con', 'action'],
+      ['🆘', 'Cần giúp', 'action'],
       ['🛋️', 'Nghỉ', 'action'],
       ['🗣️', 'Nói nhỏ', 'action'],
       ['👩', 'Mẹ', 'topic'],
