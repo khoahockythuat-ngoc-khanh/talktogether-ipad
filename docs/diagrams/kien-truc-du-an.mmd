@@ -1,0 +1,26 @@
+flowchart TD
+  U[Phụ huynh / Trẻ dùng trên iPad] --> UI[Giao diện ứng dụng Next.js]
+
+  UI --> Home[Màn hình chọn chủ đề]
+  UI --> Parent[Màn hình phụ huynh chọn câu hỏi]
+  UI --> Child[Màn hình trẻ chọn thẻ AAC]
+  UI --> Recap[Màn hình hội thoại / tổng kết]
+
+  Child --> Cards[Logic chọn thẻ theo ngữ cảnh]
+  Parent --> Followups[Logic gợi ý câu hỏi tiếp theo]
+
+  Cards --> LocalData[Dữ liệu cục bộ<br/>chủ đề, câu hỏi, bộ thẻ]
+  Followups --> LocalData
+
+  Child --> AIClient[Luồng gọi AI]
+  Parent --> AIClient
+
+  AIClient --> API[/API nội bộ Next.js<br/>/api/ai/conversation/]
+  API --> Gemini[Gemini API]
+  API --> Fallback[Mapping dự phòng cục bộ]
+
+  API --> AIClient
+
+  UI --> Storage[Lưu trữ cục bộ<br/>hồ sơ trẻ + lịch sử hội thoại]
+  UI --> Assets[Tài nguyên hình ảnh<br/>pictogram + nền]
+  UI --> Speech[Đọc câu trả lời bằng giọng nói của trình duyệt]
