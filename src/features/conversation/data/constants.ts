@@ -3,7 +3,7 @@ import type { BankCard, CoreCardCategory } from '../types';
 export const QUICK_RESPONSES = [
   ['👍', 'Có'],
   ['👎', 'Không'],
-  ['🤷', 'Không biết'],
+  ['🤷', 'Con không biết'],
 ] satisfies readonly BankCard[];
 
 export const CATEGORY_LABELS: Record<CoreCardCategory, string> = {
