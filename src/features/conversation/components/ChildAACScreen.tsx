@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import type { SyntheticEvent } from 'react';
 
-import { CARD_CATEGORY_ORDER, CATEGORY_LABELS } from '../data/constants';
+import { CARD_CATEGORY_ORDER, CATEGORY_LABELS, QUICK_RESPONSES } from '../data/constants';
 import { getCardPageCount, getCardsForQuestion } from '../logic/cards';
 import { pictogramPath } from '../logic/pictograms';
 import type { Card, Topic } from '../types';
@@ -22,7 +22,7 @@ type ChildAACScreenProps = {
   onBack: () => void;
 };
 
-export function ChildAACScreen({ topic, question, selected, aiCards, onToggle, onReset, onSpeak, onEndConversation, onBack }: ChildAACScreenProps) {
+export function ChildAACScreen({ topic, question, selected, aiCards, onToggle, onQuick, onReset, onSpeak, onEndConversation, onBack }: ChildAACScreenProps) {
   const [cardPage, setCardPage] = useState(0);
   const fallbackPageCount = getCardPageCount(topic, question);
   const hasAiCards = Boolean(aiCards?.length);
@@ -105,10 +105,6 @@ export function ChildAACScreen({ topic, question, selected, aiCards, onToggle, o
           <button className="rail-button active" onClick={onBack} type="button" aria-label="Quay lại chọn câu hỏi">
             ⌂
           </button>
-          <span className="rail-button">●</span>
-          <span className="rail-button muted">☺</span>
-          <span className="rail-button muted">≋</span>
-          <span className="rail-button muted">◫</span>
           <button
             className="rail-refresh"
             onClick={showMoreCards}
@@ -169,21 +165,39 @@ export function ChildAACScreen({ topic, question, selected, aiCards, onToggle, o
       </section>
 
       <section className="board-bottom-bar">
-        <button
-          className="board-more-button"
-          onClick={showMoreCards}
-          type="button"
-          disabled={!hasMoreCards}
-          aria-label="Thêm thẻ trả lời"
-        >
-          <span>↻</span>
-          <strong>Thêm thẻ</strong>
-        </button>
-        <TurnActionButtons
-          doneDisabled={!sentence}
-          onDone={() => onSpeak(sentence)}
-          onEnd={() => onEndConversation(sentence)}
-        />
+        <div className="quick-row" aria-label="Trả lời nhanh">
+          {QUICK_RESPONSES.map(([icon, label]) => {
+            const quickCard: Card = [icon, label, 'quick'];
+            return (
+              <button
+                key={label}
+                onClick={() => onQuick(quickCard)}
+                type="button"
+                aria-label={`Trả lời nhanh: ${label}`}
+              >
+                <span className="quick-icon">{icon}</span>
+                <strong>{label}</strong>
+              </button>
+            );
+          })}
+        </div>
+        <div className="board-footer-actions">
+          <button
+            className="board-more-button"
+            onClick={showMoreCards}
+            type="button"
+            disabled={!hasMoreCards}
+            aria-label="Thêm thẻ trả lời"
+          >
+            <span>↻</span>
+            <strong>Thêm thẻ</strong>
+          </button>
+          <TurnActionButtons
+            doneDisabled={!sentence}
+            onDone={() => onSpeak(sentence)}
+            onEnd={() => onEndConversation(sentence)}
+          />
+        </div>
       </section>
     </main>
   );
