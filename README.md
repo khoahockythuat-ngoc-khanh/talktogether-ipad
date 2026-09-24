@@ -31,3 +31,4 @@ Cài đặt các package cần thiết:
 
 ```bash
 npm install
+npm run dev
