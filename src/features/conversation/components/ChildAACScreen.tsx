@@ -7,7 +7,7 @@ import { CARD_CATEGORY_ORDER, CATEGORY_LABELS, QUICK_RESPONSES } from '../data/c
 import { getCardPageCount, getCardsForQuestion } from '../logic/cards';
 import { pictogramPath } from '../logic/pictograms';
 import type { Card, Topic } from '../types';
-import { Progress, TurnActionButtons } from './shared';
+import { TurnActionButtons } from './shared';
 
 type ChildAACScreenProps = {
   topic: Topic;
@@ -37,7 +37,6 @@ export function ChildAACScreen({ topic, question, selected, aiCards, onToggle, o
   }));
   const sentence = selected.map((card) => card[1]).join(' · ');
   const hasMoreCards = cardPageCount > 1;
-  const selectedTokens = selected.length ? selected : [];
 
   useEffect(() => {
     setCardPage(0);
@@ -49,123 +48,84 @@ export function ChildAACScreen({ topic, question, selected, aiCards, onToggle, o
   }
 
   return (
-    <main className="screen child-screen aac-board-screen">
-      <section className="board-sentence-strip" aria-label="Câu trả lời của An">
-        <button className="board-back-button" onClick={onBack} type="button" aria-label="Quay lại">
-          ‹
-        </button>
-        <div className="sentence-tokens">
-          {selectedTokens.length ? (
-            selectedTokens.map((card) => (
-              <button
-                className={`sentence-token ${card[2]}`}
-                key={card[1]}
-                onClick={() => onToggle(card)}
-                type="button"
-                aria-label={`Bỏ thẻ ${card[1]}`}
-              >
-                <span className="sentence-token-icon">
-                  <img
-                    src={pictogramPath(card[1])}
-                    alt=""
-                    aria-hidden="true"
-                    onError={(event: SyntheticEvent<HTMLImageElement>) => {
-                      event.currentTarget.hidden = true;
-                      const fallback = event.currentTarget.nextElementSibling;
-                      if (fallback instanceof HTMLElement) fallback.hidden = false;
-                    }}
-                  />
-                  <span hidden aria-hidden="true">{card[0]}</span>
-                </span>
-                <strong>{card[1]}</strong>
-              </button>
-            ))
-          ) : (
-            <div className="sentence-placeholder">
-              <small>Câu của An</small>
-              <strong>Chạm vào thẻ để tạo câu trả lời</strong>
-            </div>
-          )}
+    <main className="screen child-screen aac-board-screen spektrum-child-screen">
+      <header className="spektrum-topbar">
+        <div className="spektrum-brand-group">
+          <button className="spektrum-back-button" onClick={onBack} type="button" aria-label="Quay lại">
+            ‹
+          </button>
+          <img className="spektrum-logo" src="/brand/spektrum-primary-logo.png" alt="Spektrum" />
         </div>
-        <div className="board-toolset compact">
+
+        <section className="spektrum-question-pill" aria-label="Câu hỏi của cha mẹ">
+          <span aria-hidden="true">♡</span>
+          <strong>{question}</strong>
+        </section>
+
+        <div className="spektrum-user-tools">
           <button
-            className="board-tool clear"
+            className="spektrum-sound-button"
             disabled={!sentence}
-            onClick={onReset}
+            onClick={() => onSpeak(sentence)}
             type="button"
-            aria-label="Chọn lại"
+            aria-label="Nói câu này"
           >
-            ⌫
+            🔊
           </button>
+          <div className="spektrum-profile" aria-label="Hồ sơ trẻ">
+            <span aria-hidden="true">👦🏻</span>
+            <strong>Bảo An</strong>
+          </div>
         </div>
-      </section>
+      </header>
 
-      <section className="board-workspace">
-        <aside className="board-rail" aria-label="Nhóm thẻ">
-          <button className="rail-button active" onClick={onBack} type="button" aria-label="Quay lại chọn câu hỏi">
-            ⌂
-          </button>
-          <button
-            className="rail-refresh"
-            onClick={showMoreCards}
-            type="button"
-            disabled={!hasMoreCards}
-            aria-label="Thêm thẻ trả lời"
-          >
-            ↻
-          </button>
-        </aside>
-        <div className="board-content">
-          <section className="board-question-card">
-            <span>👩‍👦</span>
-            <div>
-              <small>Mẹ hỏi</small>
-              <strong>“{question}”</strong>
-            </div>
-            <em>{cardPage + 1}/{cardPageCount}</em>
-          </section>
-          <Progress step={2} />
-          <section className="aac-columns" aria-label="Thẻ trả lời của An">
-            {cardColumns.map(({ category, label, cards }) => (
-              <div className="aac-column" key={category}>
-                <h2 className={`aac-column-title ${category}`}>{label}</h2>
-                <div className="aac-column-cards">
-                  {cards.map((card) => {
-                    const active = selected.some((item) => item[1] === card[1]);
-                    return (
-                      <button
-                        key={card[1]}
-                        className={`aac-card ${card[2]} ${active ? 'active' : ''}`}
-                        onClick={() => onToggle(card)}
-                        aria-label={`${label}: ${card[1]}`}
-                      >
-                        <span className="aac-symbol">
-                          <img
-                            className="aac-pictogram"
-                            src={pictogramPath(card[1])}
-                            alt=""
-                            aria-hidden="true"
-                            onError={(event: SyntheticEvent<HTMLImageElement>) => {
-                              event.currentTarget.hidden = true;
-                              const fallback = event.currentTarget.nextElementSibling;
-                              if (fallback instanceof HTMLElement) fallback.hidden = false;
-                            }}
-                          />
-                          <span className="aac-emoji-fallback" hidden aria-hidden="true">{card[0]}</span>
-                        </span>
-                        <strong>{card[1]}</strong>
-                      </button>
-                    );
-                  })}
-                </div>
+      <section className="spektrum-card-stage">
+        <section className="aac-columns" aria-label="Thẻ trả lời của trẻ">
+          {cardColumns.map(({ category, label, cards }) => (
+            <div className="aac-column" key={category}>
+              <h2 className={`aac-column-title ${category}`}>
+                <span aria-hidden="true" />
+                {label}
+              </h2>
+              <div className="aac-column-cards">
+                {cards.map((card) => {
+                  const active = selected.some((item) => item[1] === card[1]);
+                  return (
+                    <button
+                      key={card[1]}
+                      className={`aac-card ${card[2]} ${active ? 'active' : ''}`}
+                      onClick={() => onToggle(card)}
+                      aria-label={`${label}: ${card[1]}`}
+                    >
+                      {active && <span className="aac-card-check" aria-hidden="true">✓</span>}
+                      <span className="aac-symbol">
+                        <img
+                          className="aac-pictogram"
+                          src={pictogramPath(card[1])}
+                          alt=""
+                          aria-hidden="true"
+                          onError={(event: SyntheticEvent<HTMLImageElement>) => {
+                            event.currentTarget.hidden = true;
+                            const fallback = event.currentTarget.nextElementSibling;
+                            if (fallback instanceof HTMLElement) fallback.hidden = false;
+                          }}
+                        />
+                        <span className="aac-emoji-fallback" hidden aria-hidden="true">{card[0]}</span>
+                      </span>
+                      <strong>{card[1]}</strong>
+                      {/* <small>{label}</small> */}
+                    </button>
+                  );
+                })}
               </div>
-            ))}
-          </section>
-        </div>
+            </div>
+          ))}
+        </section>
       </section>
 
-      <section className="board-bottom-bar">
-        <div className="quick-row" aria-label="Trả lời nhanh">
+      <section className="spektrum-quick-row" aria-label="Trả lời nhanh">
+        <span>Trả lời nhanh:</span>
+        <div className="quick-row">
           {QUICK_RESPONSES.map(([icon, label]) => {
             const quickCard: Card = [icon, label, 'quick'];
             return (
@@ -181,15 +141,28 @@ export function ChildAACScreen({ topic, question, selected, aiCards, onToggle, o
             );
           })}
         </div>
-        <div className="board-footer-actions">
+      </section>
+
+      <footer className="spektrum-bottom-actions">
+        <button
+          className="spektrum-footer-button danger"
+          disabled={!sentence}
+          onClick={onReset}
+          type="button"
+        >
+          <span aria-hidden="true">⌫</span>
+          <strong>Xóa câu</strong>
+        </button>
+
+        <div className="spektrum-footer-right">
           <button
-            className="board-more-button"
+            className="spektrum-footer-button neutral"
             onClick={showMoreCards}
             type="button"
             disabled={!hasMoreCards}
             aria-label="Thêm thẻ trả lời"
           >
-            <span>↻</span>
+            <span aria-hidden="true">↻</span>
             <strong>Thêm thẻ</strong>
           </button>
           <TurnActionButtons
@@ -198,7 +171,7 @@ export function ChildAACScreen({ topic, question, selected, aiCards, onToggle, o
             onEnd={() => onEndConversation(sentence)}
           />
         </div>
-      </section>
+      </footer>
     </main>
   );
 }

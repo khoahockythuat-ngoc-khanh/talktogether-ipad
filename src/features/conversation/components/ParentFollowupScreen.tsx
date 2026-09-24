@@ -22,34 +22,35 @@ export function ParentFollowupScreen({
   onBack,
 }: ParentFollowupScreenProps) {
   return (
-    <main className="screen parent-board-screen followup-board-screen">
-      <section className="parent-board-top">
-        <button className="board-back-button" onClick={onBack} type="button" aria-label="Quay lại">
-          ‹
-        </button>
-        <div>
-          <small>TalkTogether</small>
-          <h1>Câu hỏi tiếp theo</h1>
-          <p>Chọn một câu để tiếp tục cuộc trò chuyện.</p>
+    <main className="screen parent-board-screen followup-board-screen spektrum-parent-screen spektrum-followup-screen">
+      <header className="spektrum-parent-topbar">
+        <div className="spektrum-brand-group">
+          <button className="spektrum-back-button" onClick={onBack} type="button" aria-label="Quay lại">
+            ‹
+          </button>
+          <img className="spektrum-logo" src="/brand/spektrum-primary-logo.png" alt="Spektrum" />
         </div>
-        <div className="parent-topic-badge">
-          <span>💬</span>
-          <strong>Tiếp tục</strong>
-          <small>{suggestions.length} gợi ý</small>
-        </div>
-      </section>
 
-      <section className="parent-board-body">
+        <div className="parent-topic-badge spektrum-parent-topic-pill">
+          <span className="spektrum-topic-icon" aria-hidden="true">💬</span>
+          <span>
+            <strong>Tiếp tục</strong>
+            <small>{suggestions.length} gợi ý</small>
+          </span>
+        </div>
+      </header>
+
+      <section className="parent-board-body spektrum-parent-body">
         <section className="board-conversation-recap" aria-label="Câu vừa trao đổi">
           <div className="recap-bubble parent"><small>Mẹ</small>{question}</div>
-          <div className="recap-bubble child"><small>An</small>{response}</div>
+          <div className="recap-bubble child"><small>Trẻ</small>{response}</div>
         </section>
         <section className="parent-question-panel">
           <div className="parent-question-panel-copy">
             <small>Gợi ý tiếp theo</small>
-            <strong>Mẹ muốn hỏi An câu nào?</strong>
+            <strong>Mẹ muốn hỏi gì?</strong>
           </div>
-          <span aria-hidden="true">💬</span>
+          <span aria-hidden="true">♡</span>
         </section>
         <section className="parent-question-grid" aria-label="Danh sách câu hỏi tiếp theo">
           {suggestions.map((suggestion, index) => (
@@ -66,13 +67,13 @@ export function ParentFollowupScreen({
         </section>
       </section>
 
-      <section className="parent-board-bottom">
+      <footer className="parent-board-bottom spektrum-parent-bottom">
         <TurnActionButtons
           doneDisabled={!selectedQuestion}
           onDone={onContinue}
           onEnd={onFinish}
         />
-      </section>
+      </footer>
     </main>
   );
 }
