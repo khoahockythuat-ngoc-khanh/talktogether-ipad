@@ -1,10 +1,10 @@
-#  Dự án Khoa học Kỹ thuật 2026: SmartAAC
+#  Dự án Khoa học Kỹ thuật 2026: Spektrum
 
 **Học sinh thực hiện: Nguyễn Vũ Mỹ Ngọc (11 Anh 3), Lê Tiến Khánh (11 Tin) -- THPT Chuyên Lê Quý Đôn TP.HCM**
 
 **Giáo viên hướng dẫn: Nguyễn Thị Kim Dung**
 
-SmartAAC là một ứng dụng giao tiếp hỗ trợ trên iPad, được xây dựng nhằm giúp trẻ có khả năng ngôn ngữ hạn chế giao tiếp dễ dàng hơn với cha mẹ hoặc người hỗ trợ.
+Spektrum là một ứng dụng giao tiếp hỗ trợ trên iPad, được xây dựng nhằm giúp trẻ có khả năng ngôn ngữ hạn chế giao tiếp dễ dàng hơn với cha mẹ hoặc người hỗ trợ.
 
 Ứng dụng kết hợp giao tiếp AAC (Augmentative and Alternative Communication) với AI để gợi ý câu hỏi và hỗ trợ duy trì cuộc trò chuyện theo ngữ cảnh.
 
@@ -21,7 +21,7 @@ SmartAAC là một ứng dụng giao tiếp hỗ trợ trên iPad, được xây
 
 ## Công nghệ AI
 
-TalkTogether sử dụng **Gemini 2.5 Lite** để tạo các câu hỏi và gợi ý tiếp theo dựa trên nội dung cuộc trò chuyện.
+Spektrum sử dụng **Gemini 2.5 Lite** để tạo các câu hỏi và gợi ý tiếp theo dựa trên nội dung cuộc trò chuyện.
 
 AI được sử dụng nhằm giúp cuộc trò chuyện tự nhiên và phù hợp với ngữ cảnh hơn, trong khi trẻ vẫn giao tiếp thông qua hệ thống thẻ AAC.
 
