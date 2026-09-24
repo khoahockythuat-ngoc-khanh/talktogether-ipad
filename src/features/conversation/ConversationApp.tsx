@@ -2,19 +2,16 @@
 
 import { useEffect, useMemo, useState } from 'react';
 
-import {
-  AiLoadingScreen,
-  ChildAACScreen,
-  ConversationScreen,
-  HistoryScreen,
-  HomeScreen,
-  ParentFollowupScreen,
-  ParentQuestionScreen,
-  SpokenResponseScreen,
-  SummaryScreen,
-} from './components';
+import { AiLoadingScreen } from './components/AiLoadingScreen';
+import { ChildAACScreen } from './components/ChildAACScreen';
+import { ConversationScreen } from './components/ConversationScreen';
+import { HistoryScreen } from './components/HistoryScreen';
+import { HomeScreen } from './components/HomeScreen';
+import { ParentFollowupScreen } from './components/ParentFollowupScreen';
+import { ParentQuestionScreen } from './components/ParentQuestionScreen';
+import { SpokenResponseScreen } from './components/SpokenResponseScreen';
+import { SummaryScreen } from './components/SummaryScreen';
 import { cardIdsForLabels, cardToId } from './data/cardCatalog';
-import { TOPICS } from './data/topics';
 import { requestAiCards, requestAiFollowups } from './logic/ai';
 import { getFollowupQuestions } from './logic/followups';
 import { loadChildProfile, profileToAiContext, recordConversationTurn, recordTopicUse, saveChildProfile } from './logic/profile';
