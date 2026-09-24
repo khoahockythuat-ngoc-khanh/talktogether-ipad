@@ -71,18 +71,18 @@ function buildCatalog(): readonly CardDefinition[] {
   return [...cards.values()].sort((a, b) => a.id.localeCompare(b.id));
 }
 
-export const CARD_CATALOG = buildCatalog();
-export const CARD_CATALOG_BY_ID = new Map(CARD_CATALOG.map((card) => [card.id, card]));
-export const CARD_CATALOG_BY_LABEL = new Map(CARD_CATALOG.map((card) => [card.label, card]));
-export const CARD_CATALOG_BY_CATEGORY_LABEL = new Map(
+const CARD_CATALOG = buildCatalog();
+const CARD_CATALOG_BY_ID = new Map(CARD_CATALOG.map((card) => [card.id, card]));
+const CARD_CATALOG_BY_LABEL = new Map(CARD_CATALOG.map((card) => [card.label, card]));
+const CARD_CATALOG_BY_CATEGORY_LABEL = new Map(
   CARD_CATALOG.map((card) => [`${card.category}:${card.label}`, card]),
 );
 
-export function getCardDefinition(labelOrId: string): CardDefinition | null {
+function getCardDefinition(labelOrId: string): CardDefinition | null {
   return CARD_CATALOG_BY_ID.get(labelOrId) || CARD_CATALOG_BY_LABEL.get(labelOrId) || null;
 }
 
-export function cardIdForLabel(label: string): string {
+function cardIdForLabel(label: string): string {
   return getCardDefinition(label)?.id || `unknown-${slug(label)}`;
 }
 
@@ -90,7 +90,7 @@ export function cardIdsForLabels(labels: readonly string[]): string[] {
   return labels.map(cardIdForLabel);
 }
 
-export function cardToDefinition(card: Card): CardDefinition | null {
+function cardToDefinition(card: Card): CardDefinition | null {
   return CARD_CATALOG_BY_CATEGORY_LABEL.get(`${card[2]}:${card[1]}`) || getCardDefinition(card[1]);
 }
 

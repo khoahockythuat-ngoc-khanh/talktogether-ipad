@@ -16,7 +16,7 @@ export function responseIncludesAny(response: string, terms: readonly string[]):
   return terms.some((term) => response.includes(term));
 }
 
-export function getCardBankKey(topic: Topic | null | undefined, question: string): CardBankKey {
+function getCardBankKey(topic: Topic | null | undefined, question: string): CardBankKey {
   const topicId = topic?.id;
   const contextualBank = CONTEXTUAL_QUESTION_CARD_BANK_KEYS[question];
   if (contextualBank) return (topicId ? contextualBank[topicId] : undefined) || contextualBank.fallback;

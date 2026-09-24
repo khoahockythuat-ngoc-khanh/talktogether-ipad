@@ -1,5 +1,5 @@
 import { TOPICS } from '../data/topics';
-import { cardToId, getCardDefinition, labelsForCardIds } from '../data/cardCatalog';
+import { cardToId, labelsForCardIds } from '../data/cardCatalog';
 import type { AiProfileContext, Card, ChildProfile, Topic } from '../types';
 
 const PROFILE_STORAGE_KEY = 'talktogether-child-profile-v1';
@@ -108,15 +108,4 @@ export function profileToAiContext(profile: ChildProfile): AiProfileContext {
     frequentTopics: frequentTopicIds.map((id) => TOPICS.find((topic) => topic.id === id)?.title || id),
     repeatedQuestions,
   };
-}
-
-export function selectedCardDetails(cards: readonly Card[]): Array<{ id: string; label: string; category: string }> {
-  return cards.map((card) => {
-    const definition = getCardDefinition(card[1]);
-    return {
-      id: cardToId(card),
-      label: card[1],
-      category: definition?.category || card[2],
-    };
-  });
 }
