@@ -8,7 +8,7 @@ export const CARD_BANKS = {
   },
   schoolSubjects: {
     topic: [['🔢', 'Toán'], ['📖', 'Tiếng Việt'], ['🔤', 'Tiếng Anh'], ['🎨', 'Mỹ thuật']],
-    action: [['📚', 'Đọc'], ['✏️', 'Viết'], ['🔢', 'Đếm số'], ['🖍️', 'Tô màu']],
+    action: [['💬', 'Kể chuyện'], ['✏️', 'Viết'], ['🔢', 'Đếm số'], ['🖍️', 'Tô màu']],
     emotion: [['😀', 'Vui'], ['🧩', 'Khó'], ['🙂', 'Dễ'], ['👍', 'Thích']],
   },
   schoolFriends: {
@@ -38,7 +38,7 @@ export const CARD_BANKS = {
   },
   schoolDifficulty: {
     topic: [['🔢', 'Toán'], ['📖', 'Tiếng Việt'], ['🔤', 'Tiếng Anh'], ['🎨', 'Mỹ thuật']],
-    action: [['📚', 'Đọc'], ['✏️', 'Viết'], ['🔢', 'Đếm số'], ['🆘', 'Cần giúp']],
+    action: [['💬', 'Kể chuyện'], ['✏️', 'Viết'], ['🔢', 'Đếm số'], ['🆘', 'Cần giúp']],
     emotion: [['🧩', 'Khó'], ['🙂', 'Dễ'], ['😐', 'Bình thường'], ['😌', 'Tự hào']],
   },
   schoolPeopleMoment: {
